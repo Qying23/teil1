@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		
+		.pers {
+			background-color: #d6c0d8;
+			border: 1px #d6c0d8 solid;
+			width: 300px;
+			margin: -300px 20px -72px 13px;
+    		padding: 70px 0px 140px 225px;
+		}
+
+		.bild img {
+			width: 200px;
+			margin: 30px;
+		} 
+
+		button{
+			font-size: 25px;
+			border-radius: 10px;
+			background-color:#87b7ab
+		}
+
+		.lik{
+			font-size: 45px;
+			color: red;
+			width: 150px;
+    		margin: 0px 0px 30px 390px;
+			background-color: #d6c0d8;
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		
+
+			var john = {
+				name: "John",
+				surname:"Doe",
+				age:25,
+				image: "CR5/boy1.jpg",  
+				likes: 0,
+				herz: "CR5/like.png"
+			};
+			var jane = {
+				name: "Jane",
+				surname:"Doe",
+				age:25,
+				image: "CR5/girl1.jpg",  
+				likes: 0,
+				herz: "CR5/like.png"
+			};
+			var maxina = {
+				name: "Maxina",
+				surname:"Musterman",
+				age:25,
+				image: "CR5/girl2.jpg",  
+				likes: 0,
+				herz: "CR5/like.png"
+			};
+			var max = {
+				name: "Max",
+				surname:"Musterman",
+				age:25,
+				image: "CR5/boy2.jpg",  
+				likes: 0,
+				herz: "CR5/like.png"
+			};
+			var personen = [
+				john, 
+				jane,
+				maxina,
+				max			
+			];						
+
+		for (var i=0; i < personen.length; i++) {
+			document.write( "<div class=\"bild\">");
+			document.write( '<img src="' + personen[i].image  + '">' + '<br>');
+			document.write("</div>");
+			document.write( "<div class=\"pers\">");
+			document.write( " Name: " + personen[i].name              + "<br>");
+			document.write( " Surname: " + personen[i].surname              + "<br>");
+			document.write( " Age: " + personen[i].age              + "<br>");
+			document.write("</div>");
+			document.write( "<div class=\"lik\">");
+			document.write( '<button onclick="like('+ i +')">Like</button>' + personen[i].likes + '<img src="' + personen[i].herz  + '">');
+			document.write("</div>");
+			
+			}
+			
+		
+
+	</script>
+</body>
+</html>
